@@ -16,8 +16,20 @@
     <script src="/socket.io/socket.io.js"></script>
     <script>
         var socket = io();
-        socket.on("board_content",(msg)=>{
-            document.getElementById("event").innerHTML = msg;
+        socket.on("board_content", (msg) => {
+            // document.getElementById("event").innerHTML = msg;
+
+
+
+            //var tag = document.createElement("event");
+            //var text = document.createTextNode(msg);
+            //tag.appendChild(text);
+            //var element = document.getElementById("board");
+            //element.appendChild(tag);
+
+            var para = document.createElement("P");
+            para.innerText = msg;
+            document.body.appendChild(para);
         })
     </script>
 </body>
